@@ -10,7 +10,7 @@ html{
 .banner{
     text-align: center;
     margin: 0 auto;
-    background-color:#B22222;
+    background-color:rgb(20, 138, 69);
     color: white;
     height: 20vh;
     font-size: 4rem;
@@ -23,7 +23,7 @@ html{
     justify-content: center;
     align-items: center;
 }
-#hero-form{
+#element-form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -31,7 +31,7 @@ html{
     height: 60vh;
     font-size: 2.2rem;
 }
-.hero-form-input{
+.element-form-input{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,23 +66,20 @@ html{
     box-shadow: 0 .5rem 1rem rgba(0,0,0.2);
 }
 .btn-red{
-    background-color:#B22222;
+    background-color:rgb(20, 138, 69);
     color: white;
 }
 .display{
     width: 80vw;
     margin: 1rem auto;
 }
-.display-avenger{
+.display-element{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 10rem;
     font-size: 2.2rem;
     width: 100%;
-}
-.display-image img {
-    height: 9rem;
 }
 .utility-flex{
     display: flex;
