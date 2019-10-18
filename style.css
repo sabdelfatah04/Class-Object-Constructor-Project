@@ -65,7 +65,7 @@ html{
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba(0,0,0.2);
 }
-.btn-red{
+.btn-green{
     background-color:rgb(20, 138, 69);
     color: white;
 }
@@ -85,4 +85,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.remove-element {
+    color: green;
 }
