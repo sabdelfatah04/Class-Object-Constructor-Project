@@ -9,11 +9,11 @@ class Element {
     } */
 }
 class UI {
-  addPeriodicElement(e) {
+  addPeriodicElement(_element) {
     if (
-      userName.value ||
-      userAtomicNumber.value ||
-      userAtomicMass.value === ""
+      name ||
+      atomicNumber ||
+      atomicMass === ""
     ) {
       alert("Error: Missing Info");
     } else {
@@ -28,32 +28,34 @@ class UI {
         .insertAdjacentHTML("beforeend", newHtml);
     }
   }
+  
   removeElement(e) {
-    if (e.target.parentElement.classList.contains("remove-element")) {
-      e.target.parentElement.parentElement.remove();
-      console.log(e.target.parentElement);
+    if (EventTarget.className ==="remove-element"){
+      EventTarget.parentElement.remove();
+      }
     }
-  }
+
 
   reset() {
-    userName.value = "";
-    userAtomicMass.value = "";
-    userAtomicNumber.value = "";
+    document.getElementById('name').value = "";
+    document.getElementById("atomicNumber").value;
+    document.getElementById("atomicMass").value;
   }
+
 }
 
-/* function eventListeners() {
-  form.addEventListener("submit", displayPeriodicElement);
+function eventListeners() {
+  form.addEventListener("submit", ui.addPeriodicElement);
   display.addEventListener("click", removeElement);
 }
- */
+ 
 document.getElementById("form").addEventListener("submit", function(e) {
   const name = document.getElementById("name").value;
   const atomicNumber = document.getElementById("atomicNumber").value;
   const atomicMass = document.getElementById("atomicMass").value;
 
   const element = new Element(name, atomicNumber, atomicMass);
-  console.log(element);
+  //console.log(element);
 
   const ui = new UI();
   console.log(ui);
@@ -64,6 +66,13 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
   e.preventDefault();
 });
+document.querySelector(".display").addEventListener("click", function(e){
+  const ui = new UI();
+  ui.addPeriodicElement(element);
+  ui.reset();
+  e.preventDefault();
+}
+)
 
 
 
